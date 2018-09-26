@@ -28,12 +28,12 @@ int main() {
 			}
 			break;
 		case 'e':
+			destroyStack(stack1);
+			destroyStack(stack2);
 			exit(0);
 			break;
 		}
 	}
-	destroyStack(stack1);
-	destroyStack(stack2);
 	_getch();
 	return 0;
 }
