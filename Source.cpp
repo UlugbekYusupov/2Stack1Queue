@@ -35,9 +35,7 @@ int popStack(STACK* stack) {
 	STACK_NODE* temp;
 
 	//Statements
-	if (stack->count == 0)
-		dataOutPtr = NULL;
-	else {
+	if (stack->count != 0)
 		temp = stack->top;
 		dataOutPtr = stack->top->dataPtr;
 		stack->top = stack->top->link;
@@ -49,9 +47,7 @@ int popStack(STACK* stack) {
 /*stackTop*/
 int stackTop(STACK* stack) {
 	//Statements
-	if (stack->count == 0)
-		return NULL;
-	else
+	if (stack->count != 0)
 		return stack->top->dataPtr;
 }
 bool emptyStack(STACK* stack) {
